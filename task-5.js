@@ -10,7 +10,7 @@
 const inputRef = document.querySelector('#name-input');
 const spanRef = document.querySelector('#name-output');
 inputRef.addEventListener('input' , event =>{
-    spanRef.textContent = event.target.value;
+    spanRef.textContent = event.target.value.trim();
     if (spanRef.textContent === ''){
         spanRef.textContent = 'незнакомец'
     }

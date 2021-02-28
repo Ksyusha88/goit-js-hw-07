@@ -13,7 +13,7 @@
 
 
 const items = [...document.querySelectorAll('li.item')];
-console.log(items);
+// console.log(items);
 console.log(`В списке ${items.length} категории.`);
 
 const mapped = items.map(item => {

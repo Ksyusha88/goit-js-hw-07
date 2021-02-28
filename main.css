@@ -9,3 +9,23 @@
 #validation-input.invalid {
     border-color: #f44336;
      }
+
+ul {
+    list-style-type: none;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  .gallery_item {
+    margin-left: 20px;
+    flex-basis: calc((1280 - 10) / 2);
+  }
+  
+  .gallery_item:first-child {
+    margin-left: 0 px;
+  }

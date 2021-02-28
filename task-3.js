@@ -32,13 +32,17 @@ const images = [
 
 
 const galleryRef = document.querySelector('#gallery');
-const imageGallery = images.map(image =>{
-    const item = document.createElement("li");
-    //const nameEl = document.createElement('h2');
-    // nameEl.textContent = 'Галерея';
-    item.insertAdjacentHTML('afterbegin' , `<img src = ${image.url} alt = "${image.alt}">`);
-    return item;
-});
 
-galleryRef.append(...imageGallery);
+// const imageGallery = images.map(image =>{
+//     const item = document.createElement("li");
+//     item.insertAdjacentHTML('afterbegin' , `<img src = ${image.url} alt = "${image.alt}">`);
+//     return item;
+// });
 
+// galleryRef.append(...imageGallery);
+
+const imageGallery = images.reduce((totalGallery, element) =>{
+  return (totalGallery += `<li class="gallery_item"><img src="${element.url}" height="250", alt="${element.alt}"/></li>`);
+}, "");
+
+galleryRef.insertAdjacentHTML('afterbegin' , imageGallery);
